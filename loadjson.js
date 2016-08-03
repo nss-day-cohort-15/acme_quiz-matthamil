@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   select.addEventListener('change', loadProductTypes)
 
-    // Returns a promise of an XHR request
+  // Returns a promise of an XHR request
   function loadJSON(url) {
     return new Promise((resolve, reject) => {
       let xhr = new XMLHttpRequest();
@@ -24,9 +24,8 @@ $(document).ready(function() {
     });
   }
 
-  // Loads the categories
-  // Calls populateCategories() that then makes
-  // a request to load the product types
+  // Loads the categories and
+  // returns a promise
   function loadCategories() {
     return loadJSON('categories.json')
       .then(response => {
@@ -44,8 +43,7 @@ $(document).ready(function() {
     });
   }
 
-  // Adds an event listener to the <select> and loads
-  // the appropriate product list
+  // Loads the product types
   function loadProductTypes() {
     loadJSON('types.json')
       .then(response => {
@@ -175,6 +173,7 @@ $(document).ready(function() {
     }
   }
 
+  // Initiate!
   loadCategories().then(loadProductTypes);
 
 });
