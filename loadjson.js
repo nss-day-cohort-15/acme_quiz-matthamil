@@ -1,7 +1,9 @@
 $(document).ready(function() {
   let select = document.querySelector('select');
 
-  // Returns a promise of an XHR request
+  select.addEventListener('change', loadProductTypes)
+
+    // Returns a promise of an XHR request
   function loadJSON(url) {
     return new Promise((resolve, reject) => {
       let xhr = new XMLHttpRequest();
@@ -26,9 +28,9 @@ $(document).ready(function() {
   // Calls populateCategories() that then makes
   // a request to load the product types
   function loadCategories() {
-    loadJSON('categories.json')
+    return loadJSON('categories.json')
       .then(response => {
-         loadProductTypes(response.categories);
+         populateCategories(response.categories);
       });
   }
 
@@ -44,15 +46,12 @@ $(document).ready(function() {
 
   // Adds an event listener to the <select> and loads
   // the appropriate product list
-  function loadProductTypes(categories) {
-    select.addEventListener('change', e => {
-      loadJSON('types.json')
-        .then(response => {
-           let selectedProducts = filterByCategory(response.types);
-           loadProducts(selectedProducts);
-        });
-    });
-    populateCategories(categories);
+  function loadProductTypes() {
+    loadJSON('types.json')
+      .then(response => {
+        let selectedProducts = filterByCategory(response.types);
+        loadProducts(selectedProducts);
+      });
   }
 
   // Filters the product types by the selected category
@@ -176,6 +175,6 @@ $(document).ready(function() {
     }
   }
 
-  loadCategories();
+  loadCategories().then(loadProductTypes);
 
 });
