@@ -28,8 +28,7 @@ $(document).ready(function() {
   function loadCategories() {
     loadJSON('categories.json')
       .then(response => {
-         populateCategories(response.categories);
-         loadProductTypes();
+         loadProductTypes(response.categories);
       });
   }
 
@@ -45,7 +44,7 @@ $(document).ready(function() {
 
   // Adds an event listener to the <select> and loads
   // the appropriate product list
-  function loadProductTypes() {
+  function loadProductTypes(categories) {
     select.addEventListener('change', e => {
       loadJSON('types.json')
         .then(response => {
@@ -53,6 +52,7 @@ $(document).ready(function() {
            loadProducts(selectedProducts);
         });
     });
+    populateCategories(categories);
   }
 
   // Filters the product types by the selected category
@@ -108,7 +108,7 @@ $(document).ready(function() {
     loadJSON('products.json')
       .then(response => {
         var productsObj = filterByType(types, response.products);
-        console.log(products);
+        console.log(productsObj);
         addProductsToDom(productsObj);
       });
   }
@@ -139,7 +139,41 @@ $(document).ready(function() {
   // Each product type becomes a new row in the DOM
   // Each row contains products by type
   function addProductsToDom(productsObj) {
+    var productsArea = document.getElementById('products-area');
+    productsArea.innerHTML = '';
 
+    for (type in productsObj) {
+      // Formats the ID for each row.
+      // Some product types have spaces in the name (e.g., "dark roast")
+      let id = productsObj[type].name.replace(' ', '-');
+
+      productsArea.innerHTML += `
+        <div class="row product-row" id="${id}">
+          <div class="col-sm-12 product-type-header">
+            <h1>
+              ${
+                //Capitalize the first letter
+                productsObj[type].name.charAt(0).toUpperCase() +
+                productsObj[type].name.slice(1)
+              }
+            </h1>
+          </div>
+        </div>
+      `;
+      console.log(`${productsObj[type].name} row created.`);
+
+      // Add each product (by type) to its appropriate row
+      for (let i = 0; i < productsObj[type].products.length; i++) {
+        document.getElementById(id).innerHTML += `
+          <div class="col-sm-4 product-tile">
+            <h2>${productsObj[type].products[i].name}</h2>
+            <hr/>
+            <p>${productsObj[type].products[i].description}</p>
+          </div>
+        `;
+      }
+
+    }
   }
 
   loadCategories();

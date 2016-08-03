@@ -1,0 +1,43 @@
+body {
+  background-color: #f7f7f7;
+}
+
+img {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.product-type-header {
+  text-align: center;
+}
+
+.nav-styles {
+  letter-spacing: 2px;
+  background-color: #006341;
+}
+
+#title {
+  color: #FFF;
+  font-family: 'Arimo', sans-serif;
+}
+
+.product-type-header {
+  font-family: 'Arimo', sans-serif;
+  letter-spacing: 3px;
+}
+
+.product-row {
+  margin-bottom: 1.5vh;
+}
+
+hr {
+  color: #555;
+}
+
+.product-tile h2 {
+  font-family: 'Arimo', sans-serif;
+}
+
+.product-tile p {
+  font-family: 'Open Sans', sans-serif;
+}
