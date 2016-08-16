@@ -1,0 +1,40 @@
+{
+  "types": [
+    {
+      "id": 0,
+      "category": 0,
+      "name": "dark roast",
+      "description": "Coffee that has been roasted to a chocolately and dark finish"
+    },
+    {
+      "id": 1,
+      "category": 0,
+      "name": "medium roast",
+      "description": "A well-balanced roast great for morning coffee drinkers"
+    },
+    {
+      "id": 2,
+      "category": 0,
+      "name": "light roast",
+      "description": "Lightly roasted coffee with a lot of caffeine"
+    },
+    {
+      "id": 3,
+      "category": 1,
+      "name": "black",
+      "description": "A tasty blend of black teas"
+    },
+    {
+      "id": 4,
+      "category": 1,
+      "name": "oolong",
+      "description": "A full-bodied tea with a mellow taste"
+    },
+    {
+      "id": 5,
+      "category": 1,
+      "name": "green",
+      "description": "A light tea with great health benefits"
+    }
+  ]
+}

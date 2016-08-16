@@ -1,0 +1,112 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "type": 0,
+      "name": "Sumatra",
+      "description": "Full-bodied with a smooth mouthfeel and lingering herbal flavors. Amazing with savory foods."
+    },
+    {
+      "id": 1,
+      "type": 0,
+      "name": "Caffe Verona",
+      "description": "Well-balanced and rich with a dark cocoa texture. Try it with a piece of dark chocolate to bring out even more sweetness."
+    },
+    {
+      "id": 2,
+      "type": 0,
+      "name": "Decaf Caffe Verona",
+      "description": "A decaffeinated full-bodied, multi-region blend of coffees with the sweet touch of Italian Roast."
+    },
+    {
+      "id": 3,
+      "type": 1,
+      "name": "Breakfast Blend",
+      "description": "A lively and lighter roast with a crisp finish."
+    },
+    {
+      "id": 4,
+      "type": 1,
+      "name": "Pike Place",
+      "description": "Well-rounded with subtle notes of cocoa and toasted nuts balancing the smooth mouthfeel."
+    },
+    {
+      "id": 5,
+      "type": 1,
+      "name": "House Blend",
+      "description": "Aroma, body and flavor all in balance—with tastes of nuts and cocoa brought out by the roast."
+    },
+    {
+      "id": 6,
+      "type": 2,
+      "name": "Willow Blend",
+      "description": "Bright, complex and full-flavored with a crisp finish."
+    },
+    {
+      "id": 7,
+      "type": 2,
+      "name": "Aria Blend",
+      "description": "We gently roasted this coffee, revealing a surprisingly intense and beautifully expressive blend."
+    },
+    {
+      "id": 8,
+      "type": 2,
+      "name": "Veranda Blend",
+      "description": "Subtle with delicate nuances of soft cocoa and lightly toasted nuts."
+    },
+    {
+      "id": 9,
+      "type": 3,
+      "name": "Organic Chai",
+      "description": "A rich, robust blend of organic black tea, cinnamon, cardamom, black pepper & spices."
+    },
+    {
+      "id": 10,
+      "type": 3,
+      "name": "Earl Grey",
+      "description": "Black tea kissed with bergamot's lavender essence."
+    },
+    {
+      "id": 11,
+      "type": 3,
+      "name": "English Breakfast",
+      "description": "A breakfast-style black tea of malty boldnes & bright flavor."
+    },
+    {
+      "id": 12,
+      "type": 4,
+      "name": "Maharaja Chai Oolong Blend",
+      "description": "Robust infusion of rich spice notes from cinnamon, ginger, pepper and cloves"
+    },
+    {
+      "id": 13,
+      "type": 4,
+      "name": "Jasmine Oolong",
+      "description": "Well balanced infusion of crisp orchid and sweet jasmine with a clean finish"
+    },
+    {
+      "id": 14,
+      "type": 4,
+      "name": "Tung Ting Oolong",
+      "description": "Small-batch techniques create a standout oolong tea"
+    },
+    {
+      "id": 15,
+      "type": 5,
+      "name": "Gyokuro Imperial",
+      "description": "Rich, almost full-bodied, smooth taste with sweet ending and complex notes"
+    },
+    {
+      "id": 16,
+      "type": 5,
+      "name": "Dragonwell",
+      "description": "Lightly sweet with a smooth texture and a hint of lingering chestnut"
+    },
+    {
+      "id": 17,
+      "type": 5,
+      "name": "Jade Citrus Mint",
+      "description": "This bright tea blend will awaken your taste buds."
+    }
+  ]
+}
